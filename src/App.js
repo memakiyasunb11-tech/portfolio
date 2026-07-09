@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const experiences = [
@@ -63,9 +64,28 @@ const skills = {
   'Tools & Process': ['Git', 'GitHub', 'Visual Studio', 'VS Code', 'Agile / Scrum'],
 };
 
+function SplashScreen({ show }) {
+  return (
+    <div className={`splash-screen ${show ? '' : 'hidden'}`}>
+      <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Loading..." className="splash-logo" />
+    </div>
+  );
+}
+
 function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    // Hide splash screen after 2.5 seconds
+    const timer = setTimeout(() => {
+      setShowSplash(false);
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="app-root">
+      <SplashScreen show={showSplash} />
       <Navbar />
       <main>
         <Hero />
@@ -95,7 +115,7 @@ function Navbar() {
     <header className="navbar">
       <div className="navbar-inner">
         <div className="navbar-logo">
-          <img src="/logo.png" alt="SM Logo" className="navbar-logo-img" />
+          <img src={process.env.PUBLIC_URL + '/logo.png'} alt="SM Logo" className="navbar-logo-img" />
         </div>
         <nav className="navbar-links">
           {links.map((link) => (
