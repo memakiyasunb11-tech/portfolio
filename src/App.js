@@ -95,8 +95,7 @@ function Navbar() {
     <header className="navbar">
       <div className="navbar-inner">
         <div className="navbar-logo">
-          <span className="navbar-initial">S</span>
-          <span className="navbar-name">Sunil Memakiya</span>
+          <img src="/logo.png" alt="SM Logo" className="navbar-logo-img" />
         </div>
         <nav className="navbar-links">
           {links.map((link) => (

@@ -57,23 +57,15 @@ main {
   font-weight: 600;
 }
 
-.navbar-initial {
-  width: 34px;
-  height: 34px;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(circle at 10% 0, var(--accent-strong), var(--accent));
-  box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.6), 0 20px 35px rgba(56, 189, 248, 0.25);
-  font-size: 1.1rem;
+.navbar-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
 }
 
-.navbar-name {
-  font-size: 0.98rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--text-muted);
+.navbar-logo-img:hover {
+  transform: scale(1.05);
 }
 
 .navbar-links {
