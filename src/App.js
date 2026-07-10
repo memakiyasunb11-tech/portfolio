@@ -668,7 +668,7 @@ function Skills() {
 /* ─── GitHub Section ─────────────────────────────────────────────────────── */
 
 function GitHubSection() {
-  const statsUrl   = `https://github-readme-stats.vercel.app/api?username=${GITHUB_USERNAME}&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=a78bfa&text_color=c9d1d9&count_private=true`;
+  const statsUrl   = `https://github-readme-stats-eight-theta.vercel.app/api?username=${GITHUB_USERNAME}&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=a78bfa&text_color=c9d1d9`;
   const streakUrl  = `https://github-readme-streak-stats.herokuapp.com/?user=${GITHUB_USERNAME}&theme=tokyonight&hide_border=true&background=0d1117&stroke=6366f1&ring=a78bfa&fire=f59e0b&currStreakLabel=6366f1`;
   const chartUrl   = `https://ghchart.rshah.org/6366f1/${GITHUB_USERNAME}`;
 
