@@ -225,15 +225,7 @@ function ThreeBackground() {
   return <canvas ref={canvasRef} className="bg-canvas" aria-hidden="true" />;
 }
 
-/* ─── Splash Screen ─────────────────────────────────────────────────────── */
 
-function SplashScreen({ show }) {
-  return (
-    <div className={`splash-screen ${show ? '' : 'hidden'}`}>
-      <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Loading..." className="splash-logo" />
-    </div>
-  );
-}
 
 /* ─── Social Icon SVGs ───────────────────────────────────────────────────── */
 
@@ -279,17 +271,9 @@ function IconEmail({ size = 20 }) {
 /* ─── App ────────────────────────────────────────────────────────────────── */
 
 function App() {
-  const [showSplash, setShowSplash] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowSplash(false), 2500);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="app-root">
       <ThreeBackground />
-      <SplashScreen show={showSplash} />
       <Navbar />
       <main>
         <Hero />

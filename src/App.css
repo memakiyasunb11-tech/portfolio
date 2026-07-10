@@ -635,37 +635,6 @@ main {
   transform: translateY(-2px);
 }
 
-/* Splash Screen */
-.splash-screen {
-  position: fixed;
-  inset: 0;
-  background: var(--bg);
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
-}
-
-.splash-screen.hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.splash-logo {
-  height: 220px;
-  width: auto;
-  object-fit: contain;
-  animation: pulse-logo 2s infinite ease-in-out;
-}
-
-@keyframes pulse-logo {
-  0% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.2)); }
-  50% { transform: scale(1.2); filter: drop-shadow(0 0 25px rgba(99, 102, 241, 0.6)); }
-  100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.2)); }
-}
-
 /* ─── 3D Canvas Background ─────────────────────────────────────────────── */
 
 .bg-canvas {
