@@ -40,7 +40,7 @@ const projects = [
     name: 'EduFordge',
     featured: true,
     image: '/edufordge.png',
-    url: '#',
+    url: 'https://github.com/Memakiyasunil/Collage_demo',
     tagline: 'Transform Your Future With IT Education',
     tech: ['React', 'Node.js', 'MongoDB', 'Express.js', 'REST API', 'JWT Auth'],
     description:
@@ -536,15 +536,86 @@ function Experience() {
 
 /* ─── Projects ───────────────────────────────────────────────────────────── */
 
+function FeaturedProject({ project }) {
+  const [activeTab, setActiveTab] = React.useState(0);
+  return (
+    <article className="featured-project-card">
+      <div className="fp-badge">&#11088; Featured Project</div>
+      <div className="fp-grid">
+        <div className="fp-info">
+          <div className="fp-header">
+            <h3 className="fp-title">{project.name}</h3>
+            <span className="fp-role">{project.role}</span>
+          </div>
+          <p className="fp-tagline">{project.tagline}</p>
+          <p className="fp-description">{project.description}</p>
+          <ul className="fp-points">
+            {project.points.map((p) => <li key={p}>{p}</li>)}
+          </ul>
+          <div className="card-tags" style={{ marginTop: '1rem' }}>
+            {project.tech.map((t) => <span key={t} className="tag tag--accent">{t}</span>)}
+          </div>
+          <div className="fp-actions">
+            {project.url && project.url !== '#' && (
+              <a href={project.url} target="_blank" rel="noreferrer" className="fp-source-btn">
+                <IconGitHub size={16} />
+                View Source Code
+              </a>
+            )}
+          </div>
+        </div>
+        <div className="fp-image-wrap">
+          <img
+            src={process.env.PUBLIC_URL + project.image}
+            alt={project.name}
+            className="fp-image"
+          />
+          <div className="fp-image-overlay">
+            <span className="fp-stat">5,000+ Students</span>
+            <span className="fp-stat">6 Partner Universities</span>
+            <span className="fp-stat">8 Labs</span>
+          </div>
+        </div>
+      </div>
+      <div className="fp-tabs-section">
+        <div className="fp-tabs">
+          {project.features.map((f, i) => (
+            <button
+              key={f.group}
+              className={`fp-tab ${activeTab === i ? 'fp-tab--active' : ''}`}
+              onClick={() => setActiveTab(i)}
+            >
+              {f.icon} {f.group}
+            </button>
+          ))}
+        </div>
+        <div className="fp-tab-content">
+          <div className="fp-tab-grid">
+            {project.features[activeTab].items.map((item) => (
+              <span key={item} className="fp-feature-item">
+                <span className="fp-feature-dot">+</span> {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}
+
 function Projects() {
+  const featured = projects.filter((p) => p.featured);
+  const regular  = projects.filter((p) => !p.featured);
   return (
     <section id="projects" className="section">
       <div className="section-header">
         <h2>Projects</h2>
-        <p>Some of the personal and learning projects I have worked on.</p>
+        <p>Real-world applications and personal projects I have designed and built.</p>
       </div>
+      {featured.map((p) => <FeaturedProject key={p.name} project={p} />)}
+      <h3 className="sub-section-title">Other Projects</h3>
       <div className="cards-grid">
-        {projects.map((project) => (
+        {regular.map((project) => (
           <article key={project.name} className="card">
             <div className="card-header">
               <h3>{project.name}</h3>
@@ -567,6 +638,7 @@ function Projects() {
     </section>
   );
 }
+
 
 /* ─── Skills ─────────────────────────────────────────────────────────────── */
 
