@@ -625,7 +625,7 @@ main {
 }
 
 .splash-logo {
-  height: 140px;
+  height: 220px;
   width: auto;
   object-fit: contain;
   animation: pulse-logo 2s infinite ease-in-out;
