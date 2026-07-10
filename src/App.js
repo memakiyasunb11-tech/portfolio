@@ -37,6 +37,82 @@ const experiences = [
 
 const projects = [
   {
+    name: 'EduFordge',
+    featured: true,
+    image: '/edufordge.png',
+    url: '#',
+    tagline: 'Transform Your Future With IT Education',
+    tech: ['React', 'Node.js', 'MongoDB', 'Express.js', 'REST API', 'JWT Auth'],
+    description:
+      'A full-featured EdTech platform offering industry-oriented IT education with practical learning, expert guidance, placement assistance, and 5,000+ enrolled students across partner universities.',
+    role: 'Full-stack Developer',
+    points: [
+      'Built responsive React frontend with dynamic navigation, dropdowns, and multi-page routing.',
+      'Developed REST APIs using Node.js and Express for all platform features.',
+      'Integrated MongoDB for student data, course management, and skill swap records.',
+      'Implemented JWT authentication and role-based access for students, colleges, and admins.',
+    ],
+    features: [
+      {
+        group: 'Services',
+        icon: '🎓',
+        items: [
+          'Bootcamps', 'Internship Support', 'Career Counselling',
+          'Resume Building', 'Mock Interviews', 'Placement Preparation',
+          'Hackathons', 'Technical Communities',
+        ],
+      },
+      {
+        group: 'College Solutions',
+        icon: '🏫',
+        items: [
+          'Managed Campus', 'Student Acquisition',
+          'Corporate Connect', 'Integrated Programs',
+        ],
+      },
+      {
+        group: 'Labs',
+        icon: '🔬',
+        items: [
+          'AI & Machine Learning Lab', 'IoT & Robotics Lab',
+          'Cloud Computing Lab', 'Cyber Security Lab',
+          'Data Science Lab', 'Web Development Lab',
+          'Mobile App Dev Lab', 'AR/VR Innovation Lab',
+        ],
+      },
+      {
+        group: 'Skill Swap',
+        icon: '🔄',
+        items: [
+          'Dashboard', 'My Skills', 'Wanted Skills',
+          'Find Matches', 'Swap Requests', 'My Sessions',
+          'Favorites', 'Learning History',
+        ],
+      },
+      {
+        group: 'Programs',
+        icon: '📚',
+        items: [
+          'Undergraduate Programs (UG)', 'Postgraduate Programs (PG)',
+          'Professional Certifications', 'Diploma Courses',
+          'Industry Integrated Programs', 'Online Learning Programs',
+        ],
+      },
+      {
+        group: 'Partner Universities',
+        icon: '🤝',
+        items: [
+          'Gandhinagar University — 12 Programs',
+          'Vidhyadeep University — 13 Programs',
+          'Shreyarth University — 4 Programs',
+          'Rai University — 3 Programs',
+          'Monark University',
+          'The New Progressive College — 2 Programs',
+        ],
+      },
+    ],
+  },
+  {
     name: 'JSON to SQL Query Converter',
     tech: ['React', 'TypeScript', 'ASP.NET Core Web API', 'SQL Server'],
     description:
