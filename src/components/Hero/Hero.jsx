@@ -12,7 +12,7 @@ import {
 import { FaWhatsapp } from 'react-icons/fa';
 import { useTypewriter }   from '../../hooks/useTypewriter';
 import { personal }        from '../../data/personal';
-import { staggerContainer, fadeUpVariant, slideLeftVariant, slideRightVariant } from '../../utils/motion';
+import { staggerContainer, fadeUpVariant, slideRightVariant } from '../../utils/motion';
 import Button from '../Button/Button';
 import './Hero.css';
 

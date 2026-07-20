@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { FiBriefcase, FiMapPin, FiCalendar, FiChevronDown, FiChevronUp } from 'react-icons/fi';
 import { experiences }   from '../../data/experience';
 import SectionTitle      from '../SectionTitle/SectionTitle';
-import { staggerContainer, fadeUpVariant, slideLeftVariant, viewportConfig } from '../../utils/motion';
+import { staggerContainer, fadeUpVariant, viewportConfig } from '../../utils/motion';
 import './Experience.css';
 
 function ExperienceCard({ exp, index }) {
