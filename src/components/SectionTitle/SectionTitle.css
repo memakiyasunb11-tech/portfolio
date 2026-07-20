@@ -1,0 +1,86 @@
+/* ============================================================
+   STYLES — SectionTitle
+   ============================================================ */
+
+.section-title {
+  margin-bottom: 3.5rem;
+}
+
+.section-title--center { text-align: center; }
+.section-title--left   { text-align: left; }
+
+/* Eyebrow label */
+.section-title__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-indigo);
+  margin-bottom: 0.75rem;
+}
+
+.section-title__dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Main heading */
+.section-title__heading {
+  font-size: clamp(2rem, 5vw, var(--text-5xl));
+  font-weight: var(--fw-extrabold);
+  line-height: var(--lh-tight);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.section-title__accent {
+  background: linear-gradient(135deg, var(--accent-indigo), var(--accent-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtitle */
+.section-title__sub {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  max-width: 560px;
+  line-height: var(--lh-relaxed);
+  margin-bottom: 1.5rem;
+}
+
+.section-title--center .section-title__sub {
+  margin-inline: auto;
+}
+
+/* Animated underline */
+.section-title__line {
+  display: flex;
+  height: 3px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: var(--border);
+  width: 80px;
+}
+
+.section-title--center .section-title__line {
+  margin-inline: auto;
+}
+
+.section-title__line-inner {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent-indigo), var(--accent-cyan), var(--accent-purple));
+  background-size: 200% auto;
+  animation: shimmerBorder 3s linear infinite;
+  border-radius: var(--radius-full);
+}
