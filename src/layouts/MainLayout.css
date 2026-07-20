@@ -1,0 +1,17 @@
+.layout {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(
+    ellipse at top center,
+    rgba(99, 102, 241, 0.08) 0%,
+    var(--bg-primary) 50%,
+    #020617 100%
+  );
+}
+
+.layout__main {
+  /* Push content below sticky navbar */
+  padding-top: 0;
+  position: relative;
+  z-index: 1;
+}
