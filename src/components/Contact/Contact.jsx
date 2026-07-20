@@ -13,7 +13,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { personal }   from '../../data/personal';
 import SectionTitle   from '../SectionTitle/SectionTitle';
 import Button         from '../Button/Button';
-import { staggerContainer, fadeUpVariant, slideLeftVariant, slideRightVariant, viewportConfig } from '../../utils/motion';
+import { slideLeftVariant, slideRightVariant, viewportConfig } from '../../utils/motion';
 import './Contact.css';
 
 const contactInfo = [
