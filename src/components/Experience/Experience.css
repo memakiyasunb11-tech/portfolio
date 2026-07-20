@@ -1,0 +1,237 @@
+/* ============================================================
+   STYLES — Experience
+   ============================================================ */
+
+/* ── Timeline Container ───────────────────────────────────── */
+.exp-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 3rem;
+}
+
+.exp-timeline__line {
+  position: absolute;
+  left: 0.85rem;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent-indigo),
+    var(--accent-cyan),
+    transparent
+  );
+  border-radius: var(--radius-full);
+}
+
+/* ── Card ─────────────────────────────────────────────────── */
+.exp-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  border: 1px solid var(--border);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.exp-card:hover {
+  border-color: var(--card-color, var(--accent-indigo));
+  box-shadow: 0 8px 32px rgba(99,102,241,0.12);
+}
+
+.exp-card--current {
+  border-color: rgba(99,102,241,0.30);
+}
+
+/* Timeline Dot */
+.exp-card__dot {
+  position: absolute;
+  left: -2.25rem;
+  top: 1.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  border: 2px solid var(--card-color, var(--accent-indigo));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-card__dot-inner {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--card-color, var(--accent-indigo));
+}
+
+.exp-card--current .exp-card__dot-inner {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.exp-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.exp-card__role-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.35rem;
+}
+
+.exp-card__role {
+  font-size: var(--text-xl);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+}
+
+.exp-card__badge {
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  background: rgba(99,102,241,0.15);
+  color: var(--accent-indigo);
+  border: 1px solid rgba(99,102,241,0.30);
+}
+
+.exp-card__company {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.exp-card__type {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-sm);
+  background: var(--border);
+  border: 1px solid var(--border-subtle);
+}
+
+.exp-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.exp-card__meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.exp-card__duration {
+  color: var(--accent-cyan) !important;
+  font-weight: var(--fw-medium);
+}
+
+.exp-card__toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-glass);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--transition-base);
+}
+
+.exp-card__toggle:hover {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+}
+
+/* ── Tech Tags ────────────────────────────────────────────── */
+.exp-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.exp-tag {
+  font-size: var(--text-xs);
+  font-weight: var(--fw-medium);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+  background: rgba(99,102,241,0.08);
+  color: var(--accent-indigo);
+  border: 1px solid rgba(99,102,241,0.18);
+  letter-spacing: 0.02em;
+}
+
+/* ── Expandable Details ───────────────────────────────────── */
+.exp-card__details-inner {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 0.75rem;
+}
+
+.exp-card__section-label {
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.exp-card__section-label--achievements {
+  color: var(--accent-yellow);
+  margin-top: 1.25rem;
+}
+
+.exp-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.exp-card__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+.exp-card__list-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-indigo);
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+
+.exp-card__list-dot--achievement { background: var(--accent-yellow); }
+.exp-card__list-item--achievement { color: var(--text-primary); }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .exp-timeline       { padding-left: 2rem; }
+  .exp-timeline__line { left: 0.6rem; }
+  .exp-card__dot      { left: -1.75rem; }
+  .exp-card           { padding: 1.25rem; }
+}
