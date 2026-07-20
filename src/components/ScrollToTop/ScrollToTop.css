@@ -1,0 +1,37 @@
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: var(--z-toast);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-indigo), var(--accent-purple));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(99,102,241,0.45);
+  border: none;
+  padding: 0;
+}
+
+.scroll-top__ring {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  top: 0;
+  left: 0;
+  transform: none;
+}
+
+.scroll-top__icon {
+  color: #fff;
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 480px) {
+  .scroll-top { bottom: 1rem; right: 1rem; }
+}
