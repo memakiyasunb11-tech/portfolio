@@ -23,7 +23,6 @@ function ProjectCard({ project }) {
       className={`proj-card glass shimmer-border ${project.featured ? 'proj-card--featured' : ''}`}
       variants={scaleInVariant}
       layout
-      whileHover={{ y: -6, transition: { duration: 0.25 } }}
       style={{ '--proj-color': project.color }}
     >
       {/* Image */}
