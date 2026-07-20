@@ -52,6 +52,7 @@ const projects = [
       'Integrated MongoDB for student data, course management, and skill swap records.',
       'Implemented JWT authentication and role-based access for students, colleges, and admins.',
     ],
+    stats: ['5,000+ Students', '6 Partner Universities', '8 Labs'],
     features: [
       {
         group: 'Services',
@@ -108,6 +109,93 @@ const projects = [
           'Rai University — 3 Programs',
           'Monark University',
           'The New Progressive College — 2 Programs',
+        ],
+      },
+    ],
+  },
+  {
+    name: 'RecruitMatrix',
+    featured: true,
+    image: '/recruitmatrix-admin.png',
+    imageGallery: [
+      { src: '/recruitmatrix-admin.png',   label: 'Admin Portal – Dashboard' },
+      { src: '/recruitmatrix-company.png', label: 'Company Portal – Dashboard' },
+      { src: '/recruitmatrix-careers.png', label: 'Public Careers – Job Listings' },
+    ],
+    url: 'https://github.com/Memakiyasunil/RecruitMatrix',
+    tagline: 'End-to-End Human Resource Management System',
+    tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT Auth', 'REST API', 'Chart.js', 'Role-Based Access'],
+    description:
+      'RecruitMatrix is a comprehensive, multi-role HRMS platform covering the entire recruitment lifecycle — from talent requisition and candidate pipeline to interviews, selection, offer letters, joining, and employee management. It features three distinct portals: Admin, Company, and a public Careers page.',
+    role: 'Full-stack Developer',
+    points: [
+      'Built a multi-role authentication system with separate Admin, Company, and Candidate portals.',
+      'Designed an end-to-end hiring workflow: Requisition → Tagging → Screening → Shortlisting → Interviews → Selection → Joining Tracker.',
+      'Implemented interactive dashboards with live analytics: 12,549 candidates, 256 active jobs, 1,429 interviews, 342 hires tracked.',
+      'Developed a public Careers page with job search, filters (location, department, work mode), and direct application flow.',
+      'Integrated Charts (line, donut, bar) for Applications Overview, Pipeline trends, and Candidate Status breakdowns.',
+      'Built Employee Management, Attendance, Task Management, Offer Status, and TR Approval modules.',
+    ],
+    stats: ['12,549 Total Candidates', '256 Active Jobs', '342 Hired Candidates'],
+    features: [
+      {
+        group: 'Admin Portal',
+        icon: '🛡️',
+        items: [
+          'Dashboard with KPIs', 'Applications Inbox', 'Job Openings',
+          'Candidate Pipeline', 'Tagging & Screening', 'Shortlisting',
+          'Interviews', 'Selection', 'Joining Tracker',
+          'TR Approval', 'Operations Management',
+        ],
+      },
+      {
+        group: 'Company Portal',
+        icon: '🏢',
+        items: [
+          'Company Dashboard', 'Create Talent Requisition', 'My Requisitions',
+          'Candidate Progress', 'Shortlist Review', 'Interview Schedule',
+          'Selected Candidates', 'Offer Status', 'Joined Candidates',
+          'Employee Management', 'Attendance', 'Task Management', 'Reports',
+        ],
+      },
+      {
+        group: 'Careers Portal',
+        icon: '🔍',
+        items: [
+          'Open Positions Listing', 'Search by Title/Skill/Keyword',
+          'Filter by Location', 'Filter by Department',
+          'Filter by Work Mode (On-site / Remote / Hybrid)',
+          'View Job Details', 'Admin & Company Login',
+        ],
+      },
+      {
+        group: 'Analytics & Reports',
+        icon: '📊',
+        items: [
+          'Applications Overview (Line Chart)', 'Applications by Status (Donut Chart)',
+          'Candidate Pipeline (Bar Chart)', 'Requisition vs Joining Trend',
+          'Export Reports', 'Date-range Filtering',
+          'KPI Cards: Candidates, Jobs, Interviews, Hires',
+        ],
+      },
+      {
+        group: 'Hiring Workflow',
+        icon: '🔄',
+        items: [
+          'Talent Requisition Creation', 'Candidate Tagging',
+          'Screening', 'Shortlisting', 'Interview Scheduling',
+          'Selection Decision', 'Offer Letter Management',
+          'Joining Tracker', 'Onboarding Flow',
+        ],
+      },
+      {
+        group: 'Tech Stack',
+        icon: '⚙️',
+        items: [
+          'React (Frontend)', 'Node.js + Express.js (Backend)',
+          'MongoDB (Database)', 'JWT Authentication',
+          'Role-Based Access Control', 'REST APIs',
+          'Chart.js / Recharts', 'Responsive Design',
         ],
       },
     ],
@@ -537,7 +625,14 @@ function Experience() {
 /* ─── Projects ───────────────────────────────────────────────────────────── */
 
 function FeaturedProject({ project }) {
-  const [activeTab, setActiveTab] = React.useState(0);
+  const [activeTab, setActiveTab]     = React.useState(0);
+  const [activeImage, setActiveImage] = React.useState(0);
+
+  const gallery = project.imageGallery || [
+    { src: project.image, label: project.name },
+  ];
+  const stats = project.stats || [];
+
   return (
     <article className="featured-project-card">
       <div className="fp-badge">&#11088; Featured Project</div>
@@ -565,16 +660,40 @@ function FeaturedProject({ project }) {
           </div>
         </div>
         <div className="fp-image-wrap">
+          {/* Gallery image */}
           <img
-            src={process.env.PUBLIC_URL + project.image}
-            alt={project.name}
+            src={process.env.PUBLIC_URL + gallery[activeImage].src}
+            alt={gallery[activeImage].label}
             className="fp-image"
           />
-          <div className="fp-image-overlay">
-            <span className="fp-stat">5,000+ Students</span>
-            <span className="fp-stat">6 Partner Universities</span>
-            <span className="fp-stat">8 Labs</span>
-          </div>
+          {/* Thumbnail strip for multi-image projects */}
+          {gallery.length > 1 && (
+            <div className="fp-gallery-strip">
+              {gallery.map((img, idx) => (
+                <button
+                  key={img.src}
+                  className={`fp-gallery-thumb ${activeImage === idx ? 'fp-gallery-thumb--active' : ''}`}
+                  onClick={() => setActiveImage(idx)}
+                  title={img.label}
+                >
+                  <img
+                    src={process.env.PUBLIC_URL + img.src}
+                    alt={img.label}
+                  />
+                </button>
+              ))}
+            </div>
+          )}
+          {/* Image label */}
+          {gallery.length > 1 && (
+            <div className="fp-gallery-label">{gallery[activeImage].label}</div>
+          )}
+          {/* Stats overlay */}
+          {stats.length > 0 && (
+            <div className="fp-image-overlay">
+              {stats.map((s) => <span key={s} className="fp-stat">{s}</span>)}
+            </div>
+          )}
         </div>
       </div>
       <div className="fp-tabs-section">
