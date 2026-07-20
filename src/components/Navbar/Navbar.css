@@ -35,25 +35,12 @@
   flex-shrink: 0;
 }
 
-.navbar__logo-text {
-  font-size: 1.35rem;
-  font-weight: var(--fw-extrabold);
-  color: var(--text-primary);
-  letter-spacing: -0.03em;
-}
-
-.navbar__logo-accent {
-  color: var(--accent-indigo);
-}
-
-.navbar__logo-dot {
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent-cyan);
-  margin-bottom: 10px;
-  animation: pulseGlow 2s ease-in-out infinite;
+.navbar__logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  transform: scale(2.2);
+  transform-origin: left center;
 }
 
 /* ── Desktop Nav ──────────────────────────────────────────── */
@@ -189,6 +176,10 @@
   .navbar__nav,
   .navbar__resume-btn { display: none; }
   .navbar__toggle     { display: flex; }
+  
+  .navbar__logo-img {
+    transform: scale(1.8); /* Slightly smaller scale on mobile */
+  }
 }
 
 @media (min-width: 901px) {

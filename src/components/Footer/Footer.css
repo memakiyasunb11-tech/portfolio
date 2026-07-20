@@ -28,14 +28,15 @@
   cursor: pointer;
 }
 
-.footer__logo-text {
-  font-size: 1.5rem;
-  font-weight: var(--fw-extrabold);
-  letter-spacing: -0.03em;
-  color: var(--text-primary);
+.footer__logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  transform: scale(2.5);
+  transform-origin: center center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
-
-.footer__logo-accent { color: var(--accent-indigo); }
 
 .footer__logo-tagline {
   font-size: var(--text-xs);
@@ -123,4 +124,9 @@
 @media (max-width: 768px) {
   .footer__inner { flex-direction: column; align-items: flex-start; }
   .footer__bottom { flex-direction: column; align-items: flex-start; }
+  
+  .footer__logo-img {
+    transform: scale(2);
+    transform-origin: left center;
+  }
 }

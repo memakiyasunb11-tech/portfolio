@@ -40,10 +40,7 @@ function Navbar() {
           onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}
           aria-label="Home"
         >
-          <span className="navbar__logo-text">
-            <span className="navbar__logo-accent">S</span>M
-          </span>
-          <span className="navbar__logo-dot" />
+          <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Sunil Memakiya Logo" className="navbar__logo-img" />
         </a>
 
         {/* Desktop Nav */}

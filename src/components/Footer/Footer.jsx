@@ -27,9 +27,7 @@ function Footer() {
         <div className="footer__inner">
           {/* Logo */}
           <div className="footer__logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <span className="footer__logo-text">
-              <span className="footer__logo-accent">S</span>M
-            </span>
+            <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Sunil Memakiya Logo" className="footer__logo-img" />
             <span className="footer__logo-tagline">.NET Developer</span>
           </div>
 
