@@ -1,0 +1,61 @@
+/* ============================================================
+   RESPONSIVE BREAKPOINTS — Mobile First
+   ============================================================ */
+
+/* xs: < 480px — handled by base styles */
+/* sm: 480px+ */
+/* md: 768px+ */
+/* lg: 1024px+ */
+/* xl: 1280px+ */
+/* 2xl: 1536px+ */
+
+/* ── Container ───────────────────────────────────────────── */
+@media (max-width: 640px) {
+  :root {
+    --section-pad-y: 4rem;
+    --section-pad-x: 1rem;
+    --text-5xl: 2.25rem;
+    --text-6xl: 2.75rem;
+    --text-7xl: 3rem;
+  }
+
+  html { scroll-padding-top: 70px; }
+
+  .container { padding-inline: 1rem; }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-pad-y: 3rem;
+    --text-4xl: 1.875rem;
+    --text-5xl: 2rem;
+  }
+}
+
+/* ── Tablet ───────────────────────────────────────────────── */
+@media (min-width: 640px) and (max-width: 1023px) {
+  :root {
+    --section-pad-y: 5rem;
+    --section-pad-x: 1.5rem;
+  }
+}
+
+/* ── Reduced Motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html { scroll-behavior: auto; }
+}
+
+/* ── High Contrast ───────────────────────────────────────── */
+@media (prefers-contrast: high) {
+  :root {
+    --border: rgba(148, 163, 184, 0.40);
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+  }
+}
