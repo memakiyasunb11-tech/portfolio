@@ -23,7 +23,7 @@ const quickStats = [
 const GithubStats: React.FC = () => {
   return (
     <section id="github" className="py-24 relative bg-background/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full">
         <SectionTitle
           title="GitHub Activity"
           accent="GitHub"

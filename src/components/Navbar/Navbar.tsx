@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <div className="w-full px-4 sm:px-6 flex justify-between items-center">
         {/* Logo */}
         <a
           href="#home"
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
           className="flex items-center gap-2 group"
           aria-label="Home"
         >
-          <img src="/logo.png" alt="Logo" className="w-16 h-16 object-contain drop-shadow-[0_0_15px_rgba(99,102,241,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(6,182,212,0.6)] transition-all" />
+          <img src="/logo.png" alt="Logo" className="w-10 h-10 md:w-16 md:h-16 object-contain drop-shadow-[0_0_15px_rgba(99,102,241,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(6,182,212,0.6)] transition-all" />
           <span className="font-heading font-bold text-xl tracking-tight hidden sm:block">
             Sunil<span className="text-primary">.</span>
           </span>

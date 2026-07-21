@@ -159,7 +159,7 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects" className="py-24 relative bg-black/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full">
         <SectionTitle
           title="Featured Projects"
           accent="Projects"

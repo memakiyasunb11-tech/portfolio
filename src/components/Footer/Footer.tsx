@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
       {/* Background Glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-primary/10 blur-[100px] rounded-[100%] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full px-4 sm:px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
 
           {/* Logo */}
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
             onClick={scrollTop}
           >
             <div className="flex items-center gap-2">
-              <img src="/logo.png" alt="Logo" className="w-14 h-14 object-contain drop-shadow-[0_0_15px_rgba(99,102,241,0.3)] group-hover:drop-shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all" />
+              <img src="/logo.png" alt="Logo" className="w-10 h-10 md:w-14 md:h-14 object-contain drop-shadow-[0_0_15px_rgba(99,102,241,0.3)] group-hover:drop-shadow-[0_0_20px_rgba(6,182,212,0.5)] transition-all" />
               <span className="font-heading font-bold text-2xl tracking-tight text-white group-hover:text-primary transition-colors">
                 Sunil<span className="text-primary group-hover:text-accent transition-colors">.</span>
               </span>

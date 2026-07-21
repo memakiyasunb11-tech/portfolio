@@ -160,7 +160,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, index }) => {
 const Experience: React.FC = () => {
   return (
     <section id="experience" className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full">
         <SectionTitle
           title="Work Experience"
           accent="Experience"

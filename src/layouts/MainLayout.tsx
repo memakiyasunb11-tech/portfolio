@@ -17,7 +17,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       <Navbar />
 
       {/* Page content */}
-      <main className="flex-grow z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24" id="main-content">
+      <main className="flex-grow z-10 w-full px-4 sm:px-6 pt-24 overflow-x-hidden" id="main-content">
         {children}
       </main>
 
