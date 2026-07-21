@@ -38,9 +38,7 @@ const Navbar: React.FC = () => {
           className="flex items-center gap-2 group"
           aria-label="Home"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-heading font-bold text-xl shadow-[0_0_15px_rgba(99,102,241,0.5)] group-hover:shadow-[0_0_25px_rgba(6,182,212,0.6)] transition-shadow">
-            S
-          </div>
+          <img src="/logo.png" alt="Logo" className="w-16 h-16 object-contain drop-shadow-[0_0_15px_rgba(99,102,241,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(6,182,212,0.6)] transition-all" />
           <span className="font-heading font-bold text-xl tracking-tight hidden sm:block">
             Sunil<span className="text-primary">.</span>
           </span>
