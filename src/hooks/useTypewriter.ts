@@ -6,7 +6,7 @@ export function useTypewriter(words: string[], typingSpeed = 90, deletingSpeed =
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer: ReturnType<typeof setTimeout>;
 
     const currentWord = words[wordIndex];
     
