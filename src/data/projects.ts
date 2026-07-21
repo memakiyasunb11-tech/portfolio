@@ -1,25 +1,44 @@
-/* ============================================================
-   DATA — Projects
-   ============================================================ */
+export interface ProjectImage {
+  src: string;
+  label: string;
+}
 
-export const projects = [
-  /* ── Featured ─────────────────────────────────────────── */
+export interface Project {
+  id: number;
+  name: string;
+  tagline: string;
+  featured: boolean;
+  category: string[];
+  image: string | null;
+  imageGallery: ProjectImage[] | null;
+  github: string | null;
+  live: string | null;
+  status: string;
+  year: string;
+  tech: string[];
+  description: string;
+  features: string[];
+  stats?: string[];
+  color: string;
+}
+
+export const projects: Project[] = [
   {
-    id:       1,
-    name:     'RecruitMatrix',
-    tagline:  'End-to-End Human Resource Management System',
+    id: 1,
+    name: 'RecruitMatrix',
+    tagline: 'End-to-End Human Resource Management System',
     featured: true,
     category: ['React', 'API'],
-    image:    '/recruitmatrix-admin.png',
+    image: '/recruitmatrix-admin.png',
     imageGallery: [
-      { src: '/recruitmatrix-admin.png',   label: 'Admin Portal' },
+      { src: '/recruitmatrix-admin.png', label: 'Admin Portal' },
       { src: '/recruitmatrix-company.png', label: 'Company Portal' },
       { src: '/recruitmatrix-careers.png', label: 'Careers Page' },
     ],
-    github:   'https://github.com/Memakiyasunil/RecruitMatrix',
-    live:     null,
-    status:   'Completed',
-    year:     '2025',
+    github: 'https://github.com/Memakiyasunil/RecruitMatrix',
+    live: null,
+    status: 'Completed',
+    year: '2025',
     tech: [
       'React', 'Node.js', 'Express.js', 'MongoDB',
       'JWT Auth', 'REST API', 'Chart.js', 'Role-Based Access',
@@ -38,17 +57,17 @@ export const projects = [
     color: '#6366f1',
   },
   {
-    id:       2,
-    name:     'EduFordge',
-    tagline:  'Transform Your Future With IT Education',
+    id: 2,
+    name: 'EduFordge',
+    tagline: 'Transform Your Future With IT Education',
     featured: true,
     category: ['React', 'API'],
-    image:    '/edufordge.png',
+    image: '/edufordge.png',
     imageGallery: null,
-    github:   'https://github.com/Memakiyasunil/Collage_demo',
-    live:     null,
-    status:   'Completed',
-    year:     '2024',
+    github: 'https://github.com/Memakiyasunil/Collage_demo',
+    live: null,
+    status: 'Completed',
+    year: '2024',
     tech: ['React', 'Node.js', 'MongoDB', 'Express.js', 'REST API', 'JWT Auth'],
     description:
       'A full-featured EdTech platform offering industry-oriented IT education with practical learning, expert guidance, placement assistance, and 5,000+ enrolled students across partner universities.',
@@ -63,19 +82,18 @@ export const projects = [
     stats: ['5,000+ Students', '6 Universities', '8 Labs'],
     color: '#22d3ee',
   },
-
-  /* ── Other Projects ───────────────────────────────────── */
   {
-    id:       3,
-    name:     'JSON to SQL Query Converter',
-    tagline:  'Instantly convert JSON to optimized SQL queries',
+    id: 3,
+    name: 'JSON to SQL Query Converter',
+    tagline: 'Instantly convert JSON to optimized SQL queries',
     featured: false,
     category: ['.NET', 'React', 'API'],
-    image:    null,
-    github:   null,
-    live:     null,
-    status:   'Completed',
-    year:     '2024',
+    image: null,
+    imageGallery: null,
+    github: null,
+    live: null,
+    status: 'Completed',
+    year: '2024',
     tech: ['React', 'TypeScript', 'ASP.NET Core Web API', 'SQL Server'],
     description:
       'A developer tool that converts structured JSON input into optimized SQL queries, supporting SELECT, INSERT, UPDATE, and DELETE with SQL dialect options.',
@@ -88,16 +106,17 @@ export const projects = [
     color: '#a78bfa',
   },
   {
-    id:       4,
-    name:     'Bank Management System',
-    tagline:  'Clean architecture banking app with CQRS & Repository Pattern',
+    id: 4,
+    name: 'Bank Management System',
+    tagline: 'Clean architecture banking app with CQRS & Repository Pattern',
     featured: false,
     category: ['.NET'],
-    image:    null,
-    github:   null,
-    live:     null,
-    status:   'Completed',
-    year:     '2023',
+    image: null,
+    imageGallery: null,
+    github: null,
+    live: null,
+    status: 'Completed',
+    year: '2023',
     tech: ['C#', 'ASP.NET Core', 'Entity Framework Core', 'SQL Server', 'CQRS'],
     description:
       'A modular banking application demonstrating clean architecture, CQRS, and Repository Pattern for handling customers, accounts, and transactions with full audit trails.',
@@ -110,16 +129,17 @@ export const projects = [
     color: '#34d399',
   },
   {
-    id:       5,
-    name:     'Hospital Management System',
-    tagline:  'Full-stack hospital operations platform',
+    id: 5,
+    name: 'Hospital Management System',
+    tagline: 'Full-stack hospital operations platform',
     featured: false,
     category: ['.NET', 'React'],
-    image:    null,
-    github:   null,
-    live:     null,
-    status:   'Completed',
-    year:     '2023',
+    image: null,
+    imageGallery: null,
+    github: null,
+    live: null,
+    status: 'Completed',
+    year: '2023',
     tech: ['ASP.NET Core', 'React', 'SQL Server', 'REST API'],
     description:
       'A comprehensive hospital management web app for managing patients, doctors, appointments, billing, and medical records with role-based access control.',
@@ -133,4 +153,4 @@ export const projects = [
   },
 ];
 
-export const projectFilters = ['All', '.NET', 'React', 'Angular', 'API'];
+export const projectFilters: string[] = ['All', '.NET', 'React', 'Angular', 'API'];
