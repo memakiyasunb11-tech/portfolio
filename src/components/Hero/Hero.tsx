@@ -1,3 +1,5 @@
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowRight, Code2, Database, Cloud, Terminal } from 'lucide-react';
 import { useTypewriter } from '../../hooks/useTypewriter';
 import { personal } from '../../data/personal';
