@@ -1,14 +1,6 @@
-/* ============================================================
-   HOOK — useScrolled
-   Tracks if user has scrolled past a threshold (for navbar)
-   ============================================================ */
-
 import { useState, useEffect } from 'react';
 
-/**
- * @param {number} threshold — px scrolled before returning true
- */
-export function useScrolled(threshold = 20) {
+export function useScrolled(threshold = 20): boolean {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
