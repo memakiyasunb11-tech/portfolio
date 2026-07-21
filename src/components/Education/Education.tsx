@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Calendar, MapPin, GraduationCap, Medal } from 'lucide-react';
+import { Award, Calendar, MapPin, GraduationCap } from 'lucide-react';
 import { education, certifications } from '../../data/education';
 import SectionTitle from '../SectionTitle/SectionTitle';
 

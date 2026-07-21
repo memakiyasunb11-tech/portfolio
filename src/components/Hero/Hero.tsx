@@ -1,11 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Download, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowRight, Code2, Database, Cloud, Terminal } from 'lucide-react';
 import { useTypewriter } from '../../hooks/useTypewriter';
 import { personal } from '../../data/personal';
 import Button from '../Button/Button';
 import { FaWhatsapp, FaReact, FaAngular, FaGithub, FaDocker } from 'react-icons/fa';
-import { SiCsharp, SiDotnet, SiMicrosoftsqlserver, SiVisualstudio, SiMicrosoftazure, SiJsonwebtokens } from 'react-icons/si';
+import { SiDotnet, SiJsonwebtokens } from 'react-icons/si';
 import { VscDatabase } from 'react-icons/vsc';
 
 const socialButtons = [
@@ -16,15 +14,15 @@ const socialButtons = [
 ];
 
 const ORBIT_ICONS = [
-  { Icon: SiCsharp, color: '#239120', label: 'C#' },
+  { Icon: Code2, color: '#239120', label: 'C#' },
   { Icon: SiDotnet, color: '#512BD4', label: 'ASP.NET Core' },
   { Icon: FaReact, color: '#61DAFB', label: 'React' },
   { Icon: FaAngular, color: '#DD0031', label: 'Angular' },
   { Icon: FaGithub, color: '#FFFFFF', label: 'GitHub' },
-  { Icon: SiMicrosoftsqlserver, color: '#CC2927', label: 'SQL Server' },
+  { Icon: Database, color: '#CC2927', label: 'SQL Server' },
   { Icon: VscDatabase, color: '#4CAF50', label: 'Entity Framework' },
-  { Icon: SiVisualstudio, color: '#5C2D91', label: 'Visual Studio' },
-  { Icon: SiMicrosoftazure, color: '#0078D4', label: 'Azure' },
+  { Icon: Terminal, color: '#5C2D91', label: 'Visual Studio' },
+  { Icon: Cloud, color: '#0078D4', label: 'Azure' },
   { Icon: FaDocker, color: '#2496ED', label: 'Docker' },
   { Icon: SiJsonwebtokens, color: '#000000', label: 'JWT', bg: '#fff' },
 ];

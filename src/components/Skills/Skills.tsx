@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { skillCategories, type SkillCategory, type SkillItem } from '../../data/skills';
+import { skillCategories, type SkillItem } from '../../data/skills';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import { cn } from '../../utils/cn';
 
 // Import icons
 import { FaReact, FaAngular, FaHtml5, FaCss3Alt, FaBootstrap, FaGithub, FaDocker } from 'react-icons/fa';
-import { SiCsharp, SiDotnet, SiMicrosoftsqlserver, SiVisualstudio, SiMicrosoftazure, SiJsonwebtokens, SiPostgresql, SiMongodb, SiTypescript, SiJavascript, SiTailwindcss, SiPostman } from 'react-icons/si';
+import { SiDotnet, SiJsonwebtokens, SiPostgresql, SiMongodb, SiTypescript, SiJavascript, SiTailwindcss, SiPostman } from 'react-icons/si';
 import { VscDatabase } from 'react-icons/vsc';
-import { TbApi, TbBrandOauth } from 'react-icons/tb';
-import { Code2, Database, LayoutTemplate, Settings } from 'lucide-react';
+import { TbApi } from 'react-icons/tb';
+import { Code2, Database, LayoutTemplate, Settings, Cloud, Terminal } from 'lucide-react';
 
 const iconMap: Record<string, React.ElementType> = {
   'ASP.NET Core': SiDotnet,
-  'C#': SiCsharp,
+  'C#': Code2,
   'Web API': TbApi,
   'Entity Framework Core': VscDatabase,
   'ADO.NET': VscDatabase,
-  'LINQ': SiCsharp,
+  'LINQ': Code2,
   'MVC Pattern': Code2,
   'CQRS': Code2,
-  'SQL Server': SiMicrosoftsqlserver,
+  'SQL Server': Database,
   'Stored Procedures': Database,
   'Query Optimization': Database,
   'Indexing & Execution Plans': Database,
@@ -36,10 +36,10 @@ const iconMap: Record<string, React.ElementType> = {
   'AG Grid': LayoutTemplate,
   'Tailwind CSS': SiTailwindcss,
   'Git & GitHub': FaGithub,
-  'Visual Studio': SiVisualstudio,
+  'Visual Studio': Terminal,
   'VS Code': Code2,
   'Postman': SiPostman,
-  'Azure': SiMicrosoftazure,
+  'Azure': Cloud,
   'Docker': FaDocker,
   'Agile / Scrum': Settings,
   'JWT': SiJsonwebtokens,

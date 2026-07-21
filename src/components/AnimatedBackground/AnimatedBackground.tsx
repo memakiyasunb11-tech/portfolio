@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
